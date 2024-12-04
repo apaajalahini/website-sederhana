@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Belajar HTML</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9f1f7;
+            color: #333;
+        }
+        
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 5px solid #2c6e28;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2, h3 {
+            color: #2c6e28;
+            font-size: 28px;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+        }
+
+        li {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: 'Courier New', monospace;
+            color: #d14;
+            overflow-x: auto;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 16px;
+        }
+
+        a {
+            color: #ff6347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 5px;
+            border-left: 4px solid #4caf50;
+        }
+
+        .btn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card div {
+            width: 48%;
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card div h3 {
+            font-size: 22px;
+            color: #2c6e28;
+        }
+
+        .card div p {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Tutorial Belajar HTML</h1>
+        <p>Dasar-dasar HTML untuk Pemula</p>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <h2>Apa itu HTML?</h2>
+        <p>HTML (Hypertext Markup Language) adalah bahasa standar yang digunakan untuk membuat halaman web. HTML menyusun struktur dasar dari sebuah halaman web.</p>
+    </section>
+
+    <section>
+        <h2>Struktur Dasar HTML</h2>
+        <p>Berikut adalah struktur dasar dari sebuah halaman HTML:</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Judul Halaman&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Halo, Dunia!&lt;/h1&gt;
+    &lt;p&gt;Selamat datang di tutorial HTML!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        <p>Penjelasan:</p>
+        <ul>
+            <li><strong>&lt;!DOCTYPE html&gt;</strong> - Menentukan jenis dokumen dan versi HTML (HTML5 di sini).</li>
+            <li><strong>&lt;html&gt;</strong> - Elemen utama yang mengelilingi seluruh dokumen HTML.</li>
+            <li><strong>&lt;head&gt;</strong> - Bagian yang berisi metadata seperti karakter set dan judul halaman.</li>
+            <li><strong>&lt;body&gt;</strong> - Bagian yang berisi konten yang ditampilkan pada halaman web.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <div>
+            <h3>Tag HTML Dasar</h3>
+            <p>HTML menggunakan tag untuk menentukan elemen di halaman web. Beberapa tag dasar yang sering digunakan adalah:</p>
+            <ul>
+                <li><strong>&lt;h1&gt; sampai &lt;h6&gt;</strong> - Tag untuk judul, dengan &lt;h1&gt; menjadi yang terbesar dan &lt;h6&gt; yang terkecil.</li>
+                <li><strong>&lt;p&gt;</strong> - Tag untuk paragraf.</li>
+                <li><strong>&lt;a&gt;</strong> - Tag untuk membuat tautan (hyperlink).</li>
+                <li><strong>&lt;img&gt;</strong> - Tag untuk menampilkan gambar.</li>
+                <li><strong>&lt;ul&gt;</strong> - Tag untuk daftar tidak terurut (bullet list).</li>
+                <li><strong>&lt;ol&gt;</strong> - Tag untuk daftar terurut (numbered list).</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Contoh Penggunaan Tag</h3>
+            <h4>Tag Judul (Headings)</h4>
+            <pre>
+&lt;h1&gt;Ini adalah judul level 1&lt;/h1&gt;
+&lt;h2&gt;Ini adalah judul level 2&lt;/h2&gt;
+&lt;h3&gt;Ini adalah judul level 3&lt;/h3&gt;
+            </pre>
+            <h4>Tag Paragraf</h4>
+            <pre>
+&lt;p&gt;Ini adalah paragraf pertama.&lt;/p&gt;
+&lt;p&gt;Ini adalah paragraf kedua.&lt;/p&gt;
+            </pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>Formulir HTML</h2>
+        <p>HTML memungkinkan pembuatan formulir dengan tag <code>&lt;form&gt;</code>. Berikut adalah contoh formulir sederhana:</p>
+        <pre>
+&lt;form&gt;
+  &lt;label for="nama"&gt;Nama&lt;/label&gt;
+  &lt;input type="text" id="nama" name="nama"&gt;&lt;br&gt;
+  
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+  
+  &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;
+        </pre>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tutorial Belajar HTML. Semua hak cipta dilindungi. <a href="#" class="btn">Kembali ke Atas</a></p>
+    </footer>
+
+</body>
+</html>

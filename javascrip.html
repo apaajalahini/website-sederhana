@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Pendaftaran Penerbangan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #343a40;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff6347;
+            transform: translateY(-3px);
+        }
+
+        .content {
+            padding: 50px 10%;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            color: #333;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container button {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .form-container input:focus,
+        .form-container select:focus {
+            border-color: #0066cc;
+            outline: none;
+        }
+
+        .form-container button {
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #004e99;
+            transform: translateY(-3px);
+        }
+
+        .info-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            width: 30%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-item h3 {
+            color: #0066cc;
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .info-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 14px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                padding: 50px 5%;
+            }
+
+            .info-item {
+                width: 48%;
+            }
+
+            nav a {
+                padding: 10px 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pusat Pendaftaran Penerbangan</h1>
+        <p>Daftar Penerbangan Anda dengan Mudah dan Cepat</p>
+    </header>
+
+    <nav>
+        <a href="#register">Pendaftaran</a>
+        <a href="#flights">Penerbangan</a>
+        <a href="#services">Layanan</a>
+    </nav>
+
+    <div class="content">
+        <!-- Pendaftaran Section -->
+        <div class="section" id="register">
+            <h2>Pendaftaran Penerbangan</h2>
+            <div class="form-container">
+                <form action="#">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan Nama Lengkap" required>
+
+                    <label for="flight">Pilih Penerbangan</label>
+                    <select id="flight" name="flight" required>
+                        <option value="">Pilih Penerbangan</option>
+                        <option value="Jakarta-Bali">Jakarta - Bali</option>
+                        <option value="Surabaya-Yogyakarta">Surabaya - Yogyakarta</option>
+                        <option value="Medan-Jakarta">Medan - Jakarta</option>
+                    </select>
+
+                    <label for="date">Tanggal Penerbangan</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="passengers">Jumlah Penumpang</label>
+                    <input type="number" id="passengers" name="passengers" placeholder="Masukkan Jumlah Penumpang" required>
+
+                    <button type="submit">Daftar Sekarang</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Penerbangan Section -->
+        <div class="section" id="flights">
+            <h2>Penerbangan yang Tersedia</h2>
+            <div class="info-box">
+                <div class="info-item">
+                    <h3>Jakarta - Bali</h3>
+                    <p>Jadwal: Setiap Hari</p>
+                    <p>Harga: Rp 1.500.000</p>
+                </div>
+                <div class="info-item">
+                    <h3>Surabaya - Yogyakarta</h3>
+                    <p>Jadwal: Senin, Rabu, Jumat</p>
+                    <p>Harga: Rp 900.000</p>
+                </div>
+                <div class="info-item">
+                    <h3>Medan - Jakarta</h3>
+                    <p>Jadwal: Setiap Hari</p>
+                    <p>Harga: Rp 1.200.000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layanan Section -->
+        <div class="section" id="services">
+            <h2>Layanan Kami</h2>
+            <div class="info-box">
+                <div class="info-item">
+                    <h3>Check-in Online</h3>
+                    <p>Proses check-in secara online agar lebih cepat dan mudah.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Layanan Makanan</h3>
+                    <p>Pesan makanan enak di dalam pesawat untuk kenyamanan perjalanan Anda.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Layanan Baggage</h3>
+                    <p>Layanan bagasi yang aman dan nyaman untuk barang bawaan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pusat Pendaftaran Penerbangan. Semua hak cipta dilindungi.</p>
+    </footer>
+
+</body>
+</html>

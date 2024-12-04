@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Belajar PHP</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        section {
+            background-color: #ffffff;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            color: #3498db;
+            font-size: 32px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        pre {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #2980b9;
+            font-family: 'Courier New', monospace;
+            color: #ecf0f1;
+            overflow-x: auto;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            pre {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Tutorial Belajar PHP</h1>
+        <p>Dasar-dasar PHP untuk Pemula - Panduan Lengkap</p>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <h2>Apa itu PHP?</h2>
+        <p>PHP (Hypertext Preprocessor) adalah bahasa pemrograman yang digunakan untuk pengembangan aplikasi web dinamis. PHP sering digunakan untuk membuat halaman web interaktif dan dapat berinteraksi dengan database.</p>
+    </section>
+
+    <section>
+        <h2>Struktur Dasar PHP</h2>
+        <p>PHP dimulai dengan tag pembuka <code>&lt;?php</code> dan diakhiri dengan tag penutup <code>?&gt;</code>. Berikut adalah contoh struktur dasar kode PHP:</p>
+        <pre>
+&lt;?php
+    echo "Halo, Dunia!"; // Ini adalah komentar
+?&gt;
+        </pre>
+        <p>Contoh di atas akan menampilkan teks "Halo, Dunia!" di halaman web.</p>
+    </section>
+
+    <section>
+        <h2>Variabel dan Tipe Data</h2>
+        <p>PHP mendukung berbagai tipe data seperti string, integer, float, dan boolean. Variabel di PHP diawali dengan simbol <code>$</code>. Berikut adalah contoh penggunaan variabel di PHP:</p>
+        <pre>
+&lt;?php
+    $nama = "John";
+    $umur = 25;
+    echo "Nama saya $nama dan saya berumur $umur tahun.";
+?&gt;
+        </pre>
+        <p>Contoh di atas akan menampilkan teks "Nama saya John dan saya berumur 25 tahun."</p>
+    </section>
+
+    <section>
+        <h2>Struktur Kontrol</h2>
+        <p>PHP memiliki berbagai struktur kontrol seperti <code>if</code>, <code>else</code>, dan <code>while</code>. Berikut adalah contoh penggunaan <code>if</code> untuk memeriksa kondisi:</p>
+        <pre>
+&lt;?php
+    $x = 10;
+    if ($x > 5) {
+        echo "X lebih besar dari 5";
+    } else {
+        echo "X kurang dari atau sama dengan 5";
+    }
+?&gt;
+        </pre>
+        <p>Contoh di atas akan menampilkan "X lebih besar dari 5".</p>
+    </section>
+
+    <section>
+        <h2>Fungsi dalam PHP</h2>
+        <p>PHP memungkinkan Anda untuk membuat fungsi yang dapat digunakan berulang kali. Berikut adalah contoh fungsi untuk menambahkan dua angka:</p>
+        <pre>
+&lt;?php
+    function tambah($a, $b) {
+        return $a + $b;
+    }
+
+    echo tambah(5, 3); // Output: 8
+?&gt;
+        </pre>
+        <p>Contoh di atas mendefinisikan fungsi <code>tambah</code> yang mengembalikan hasil penjumlahan dua angka.</p>
+    </section>
+
+    <section>
+        <h2>Penggunaan Formulir dengan PHP</h2>
+        <p>PHP dapat digunakan untuk memproses data yang dikirim melalui formulir HTML. Berikut adalah contoh formulir HTML yang mengirim data ke PHP untuk diproses:</p>
+        <pre>
+<!-- Formulir HTML -->
+&lt;form action="proses.php" method="post"&gt;
+    Nama: &lt;input type="text" name="nama"&gt;&lt;br&gt;
+    Umur: &lt;input type="text" name="umur"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Kirim"&gt;
+&lt;/form&gt;
+
+<!-- File proses.php -->
+&lt;?php
+    $nama = $_POST['nama'];
+    $umur = $_POST['umur'];
+    echo "Nama: $nama, Umur: $umur";
+?&gt;
+        </pre>
+        <p>Formulir ini mengirim data ke file PHP untuk diproses dan kemudian menampilkan data yang diterima.</p>
+    </section>
+
+    <section>
+        <h2>Menampilkan Data dari Database MySQL</h2>
+        <p>PHP sering digunakan untuk berinteraksi dengan database MySQL. Berikut adalah contoh kode PHP untuk menampilkan data dari database:</p>
+        <pre>
+&lt;?php
+    // Menghubungkan ke database
+    $conn = new mysqli("localhost", "username", "password", "database");
+
+    // Memeriksa koneksi
+    if ($conn->connect_error) {
+        die("Koneksi gagal: " . $conn->connect_error);
+    }
+
+    // Query untuk mengambil data
+    $sql = "SELECT id, nama FROM users";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Menampilkan data
+        while($row = $result->fetch_assoc()) {
+            echo "ID: " . $row["id"]. " - Nama: " . $row["nama"]. "<br>";
+        }
+    } else {
+        echo "0 hasil";
+    }
+    $conn->close();
+?&gt;
+        </pre>
+        <p>Contoh di atas menampilkan data dari tabel "users" di database MySQL.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tutorial Belajar PHP. Semua hak cipta dilindungi. <a href="#">Kembali ke Atas</a></p>
+    </footer>
+
+</body>
+</html>

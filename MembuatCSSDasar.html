@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Belajar CSS</title>
+    <style>
+        /* Reset margin dan padding untuk semua elemen */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Animasi background header */
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #3498db;
+            }
+            50% {
+                background-color: #2ecc71;
+            }
+            100% {
+                background-color: #3498db;
+            }
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: backgroundAnimation 5s infinite;
+        }
+
+        header h1 {
+            font-size: 50px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /* Desain section */
+        section {
+            margin: 20px auto;
+            padding: 30px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            color: #3498db;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 26px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        pre {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin-bottom: 20px;
+            color: #e74c3c;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 30px;
+        }
+
+        li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Highlighted code block */
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 30px;
+        }
+
+        /* Style untuk tombol back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 18px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #2980b9;
+        }
+
+        /* Media query untuk responsif */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 22px;
+            }
+
+            footer {
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            .back-to-top {
+                padding: 12px 18px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Tutorial Belajar CSS</h1>
+        <p>Dasar-dasar CSS untuk Pemula</p>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <h2>Apa itu CSS?</h2>
+        <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendesain dan mengatur tampilan halaman web. CSS digunakan untuk mengatur warna, ukuran, posisi elemen, dan banyak lagi.</p>
+    </section>
+
+    <section>
+        <h2>Struktur Dasar CSS</h2>
+        <p>CSS terdiri dari selector, properti, dan nilai. Berikut adalah struktur dasar CSS:</p>
+        <pre>
+/* Ini adalah komentar */
+selector {
+    property: value;
+}
+        </pre>
+        <p>Contoh:</p>
+        <pre>
+h1 {
+    color: #3498db;
+    font-size: 36px;
+}
+        </pre>
+    </section>
+
+    <section>
+        <h2>Tag HTML yang Dapat Diberi Gaya</h2>
+        <p>Beberapa tag HTML yang sering diberi gaya menggunakan CSS adalah:</p>
+        <ul>
+            <li><strong>&lt;h1&gt; sampai &lt;h6&gt;</strong> - Tag untuk membuat judul (heading).</li>
+            <li><strong>&lt;p&gt;</strong> - Tag untuk membuat paragraf.</li>
+            <li><strong>&lt;a&gt;</strong> - Tag untuk membuat tautan (link).</li>
+            <li><strong>&lt;div&gt;</strong> - Tag untuk membuat divisi atau kontainer.</li>
+            <li><strong>&lt;img&gt;</strong> - Tag untuk menampilkan gambar.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contoh Penerapan CSS</h2>
+
+        <h3>Menambahkan Warna pada Teks</h3>
+        <p>CSS dapat digunakan untuk mengubah warna teks. Berikut adalah contoh CSS untuk mengubah warna teks pada tag &lt;h1&gt;:</p>
+        <pre>
+h1 {
+    color: #3498db; /* Mengubah warna teks menjadi biru */
+}
+        </pre>
+
+        <h3>Menambahkan Padding dan Margin</h3>
+        <p>Padding adalah jarak antara konten dan batas elemen, sementara margin adalah jarak antara elemen dengan elemen lainnya. Berikut adalah contoh CSS untuk padding dan margin:</p>
+        <pre>
+p {
+    padding: 10px;  /* Menambahkan padding 10px di dalam elemen */
+    margin: 20px;   /* Menambahkan margin 20px di luar elemen */
+}
+        </pre>
+
+        <h3>Menambahkan Border</h3>
+        <p>CSS juga memungkinkan Anda menambahkan border (garis) pada elemen HTML:</p>
+        <pre>
+div {
+    border: 2px solid #3498db; /* Menambahkan border biru dengan ketebalan 2px */
+    padding: 15px;
+}
+        </pre>
+
+        <h3>Menambahkan Background Color</h3>
+        <p>CSS memungkinkan Anda untuk memberi warna latar belakang pada elemen:</p>
+        <pre>
+section {
+    background-color: #f0f4f8; /* Menambahkan warna latar belakang */
+}
+        </pre>
+    </section>
+
+    <section>
+        <h2>CSS Box Model</h2>
+        <p>Box model adalah konsep yang menjelaskan bagaimana elemen HTML dirender di browser. Setiap elemen memiliki margin, border, padding, dan konten. Berikut adalah gambaran umum box model:</p>
+        <ul>
+            <li><strong>Margin:</strong> Ruang di luar border.</li>
+            <li><strong>Border:</strong> Garis yang mengelilingi padding dan konten.</li>
+            <li><strong>Padding:</strong> Ruang antara border dan konten.</li>
+            <li><strong>Konten:</strong> Isi dari elemen (misalnya teks atau gambar).</li>
+        </ul>
+        <p>Contoh penggunaan box model:</p>
+        <pre>
+div {
+    margin: 20px;
+    border: 2px solid #3498db;
+    padding: 15px;
+}
+        </pre>
+    </section>
+
+    <!-- Button for Back to Top -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+
+    <footer>
+        <p>&copy; 2024 Tutorial Belajar CSS. Semua hak cipta dilindungi. <a href="#">Kembali ke Atas</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Belajar JavaScript</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2980b9;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        section {
+            background-color: #ffffff;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            color: #2980b9;
+            font-size: 32px;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        pre {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #2980b9;
+            font-family: 'Courier New', monospace;
+            color: #ecf0f1;
+            overflow-x: auto;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            pre {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Tutorial Belajar JavaScript</h1>
+        <p>Dasar-dasar JavaScript untuk Pemula - Panduan Lengkap</p>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <h2>Apa itu JavaScript?</h2>
+        <p>JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web interaktif. JavaScript dapat digunakan untuk mengubah konten halaman secara dinamis, menangani event, dan berinteraksi dengan server tanpa harus memuat ulang halaman.</p>
+    </section>
+
+    <section>
+        <h2>Struktur Dasar JavaScript</h2>
+        <p>JavaScript biasanya diletakkan dalam tag <code>&lt;script&gt;</code>. Berikut adalah contoh struktur dasar JavaScript:</p>
+        <pre>
+&lt;script&gt;
+    console.log("Halo, Dunia!"); // Ini adalah komentar
+&lt;/script&gt;
+        </pre>
+        <p>Contoh di atas akan menampilkan pesan "Halo, Dunia!" di konsol pengembang (developer console) browser.</p>
+    </section>
+
+    <section>
+        <h2>Variabel dan Tipe Data</h2>
+        <p>JavaScript mendukung berbagai tipe data seperti string, number, boolean, dan objek. Variabel di JavaScript dapat dideklarasikan menggunakan kata kunci <code>let</code>, <code>const</code>, atau <code>var</code>. Berikut adalah contoh penggunaan variabel di JavaScript:</p>
+        <pre>
+&lt;script&gt;
+    let nama = "John";
+    let umur = 25;
+    console.log("Nama saya " + nama + " dan saya berumur " + umur + " tahun.");
+&lt;/script&gt;
+        </pre>
+        <p>Contoh di atas akan menampilkan "Nama saya John dan saya berumur 25 tahun." di konsol.</p>
+    </section>
+
+    <section>
+        <h2>Struktur Kontrol</h2>
+        <p>JavaScript memiliki berbagai struktur kontrol seperti <code>if</code>, <code>else</code>, <code>for</code>, dan <code>while</code>. Berikut adalah contoh penggunaan <code>if</code> untuk memeriksa kondisi:</p>
+        <pre>
+&lt;script&gt;
+    let x = 10;
+    if (x > 5) {
+        console.log("X lebih besar dari 5");
+    } else {
+        console.log("X kurang dari atau sama dengan 5");
+    }
+&lt;/script&gt;
+        </pre>
+        <p>Contoh di atas akan menampilkan "X lebih besar dari 5" di konsol.</p>
+    </section>
+
+    <section>
+        <h2>Fungsi dalam JavaScript</h2>
+        <p>JavaScript memungkinkan Anda untuk membuat fungsi yang dapat digunakan berulang kali. Berikut adalah contoh fungsi untuk menambahkan dua angka:</p>
+        <pre>
+&lt;script&gt;
+    function tambah(a, b) {
+        return a + b;
+    }
+
+    console.log(tambah(5, 3)); // Output: 8
+&lt;/script&gt;
+        </pre>
+        <p>Contoh di atas mendefinisikan fungsi <code>tambah</code> yang mengembalikan hasil penjumlahan dua angka.</p>
+    </section>
+
+    <section>
+        <h2>Penggunaan Event dalam JavaScript</h2>
+        <p>JavaScript memungkinkan Anda untuk menangani event seperti klik tombol atau pengisian formulir. Berikut adalah contoh menggunakan event <code>click</code> pada sebuah tombol:</p>
+        <pre>
+&lt;script&gt;
+    function klikTombol() {
+        alert("Tombol diklik!");
+    }
+&lt;/script&gt;
+
+<!-- HTML -->
+&lt;button onclick="klikTombol()">Klik Saya</button>
+        </pre>
+        <p>Contoh di atas akan menampilkan sebuah alert saat tombol diklik.</p>
+    </section>
+
+    <section>
+        <h2>Menangani Input Pengguna</h2>
+        <p>JavaScript juga dapat digunakan untuk menangani input pengguna. Berikut adalah contoh menggunakan JavaScript untuk membaca input dari formulir HTML:</p>
+        <pre>
+&lt;script&gt;
+    function tampilkanData() {
+        let nama = document.getElementById("nama").value;
+        alert("Nama Anda: " + nama);
+    }
+&lt;/script&gt;
+
+<!-- HTML -->
+&lt;input type="text" id="nama" placeholder="Masukkan Nama"&gt;
+&lt;button onclick="tampilkanData()">Kirim</button>
+        </pre>
+        <p>Formulir ini memungkinkan pengguna untuk memasukkan nama, dan saat tombol diklik, JavaScript akan menampilkan nama yang dimasukkan melalui alert.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tutorial Belajar JavaScript. Semua hak cipta dilindungi. <a href="#">Kembali ke Atas</a></p>
+    </footer>
+
+</body>
+</html>
